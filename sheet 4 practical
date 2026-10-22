@@ -1,0 +1,57 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+
+package javaapplication340;
+import java.util.Scanner;
+
+
+public class JavaApplication340 {
+//public static int getlnt ( Scanner  s , String  prompt ){
+//    System.out.println(prompt);
+//    int age=s.nextInt();
+//    return age;
+//}
+//    
+//
+//    public static void main(String[] args) {
+//        Scanner input = new Scanner (System.in);
+//        
+//       int age= getlnt(input, "enter ur age") ;
+//       System.out.print("Recorded Age: "+age);
+//    }
+    
+//    public static double calculateDistance(double x1,double y1,double x2,double y2 ){
+//        double Distance=Math.sqrt((x2 - x1) *(x2 - x1)+ (y2 - y1)*(y2 - y1));
+//        return Distance;
+//    }
+//    public static void main(String[] args){
+//        Scanner input = new Scanner (System.in);
+//        System.out.print(calculateDistance(4.2,3.2,6.4,9.1));
+
+ 
+    public static double computeArea(double radius) {
+        return Math.PI * radius * radius;
+    }
+
+ 
+    public static double computeArea(double length, double width) {
+        return length * width;
+    }
+
+   
+    public static double computeArea(double base, double height, boolean isTriangle) {
+        return 0.5 * base * height;
+    }
+     public static void main(String[] args) {
+        System.out.println("Circle Area = " + computeArea(5.0));
+
+        System.out.println("Rectangle Area = " + computeArea(4.0, 6.0));
+
+        System.out.println("Triangle Area = " + computeArea(4.0, 6.0, true));
+    }
+}
+    
+
