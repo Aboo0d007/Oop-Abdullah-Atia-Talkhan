@@ -1,0 +1,41 @@
+import java.util.Scanner;
+
+class Test {
+    public static void main(String[] args) {
+        Scanner scan = new Scanner(System.in);
+        
+        int max = 0;
+        int min = Integer.MAX_VALUE;
+        int count = 0;
+        long sum = 0;
+        
+        System.out.println("Positive integer (0 to finish):");
+        int n = scan.nextInt();
+        
+        while (n != 0) {
+            if (n > 0) {
+                if (n > max) {
+                    max = n;
+                }
+                if (n < min) {
+                    min = n;
+                }
+                sum += n;
+                count++;
+            } else {
+                System.out.println("Please use a positive integer.");
+            }
+            System.out.println("Positive integer (0 to finish):");
+            n = scan.nextInt();
+        }
+        
+        if (count == 0) {
+            System.out.println("No numbers entered.");
+        } else {
+            double avg = (double) sum / count;
+            System.out.println("Largest = " + max);
+            System.out.println("Smallest = " + min);
+            System.out.printf("Average = %.2f\n", avg);
+        }
+    }
+}
