@@ -1,0 +1,19 @@
+import java.util.Scanner;
+
+public class Problem2 {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("Enter diameter: ");
+        double diameter = scanner.nextDouble();
+        System.out.print("Enter height: ");
+        double height = scanner.nextDouble();
+        coneVolume(diameter, height);
+        scanner.close();
+    }
+
+    public static void coneVolume(double dValue, double hValue) {
+        double r = dValue / 2.0;
+        double volume = (1.0 / 3.0) * Math.PI * Math.pow(r, 2) * hValue;
+        System.out.printf("Volume: %.2f\n", volume);
+    }
+}
