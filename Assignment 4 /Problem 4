@@ -1,0 +1,35 @@
+import java.util.Scanner;
+
+public class Problem4 {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("Enter an email: ");
+        String email = scanner.nextLine();
+        System.out.println("Output: " + maskEmail(email));
+        scanner.close();
+    }
+
+    public static String maskEmail(String email) {
+        email = email.trim();
+        int atIndex = email.indexOf('@');
+        if (atIndex == -1) {
+            return "Invalid Email";
+        }
+
+        String username = email.substring(0, atIndex);
+        String domain = email.substring(atIndex).toLowerCase();
+
+        if (username.length() <= 2) {
+            return username + domain;
+        }
+
+        StringBuilder maskedUsername = new StringBuilder();
+        maskedUsername.append(username.substring(0, 2));
+
+        for (int i = 2; i < username.length(); i++) {
+            maskedUsername.append('*');
+        }
+
+        return maskedUsername.toString() + domain;
+    }
+}
